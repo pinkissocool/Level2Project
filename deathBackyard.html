@@ -9,16 +9,16 @@
         function initialize(){
             message = document.getElementById("deathMessage");
 
-            if (!sessionStorage.earthKey){
-                sessionStorage.earthKey = true;
+            if (!sessionStorage.backyardKey){
+                sessionStorage.backyardKey= true;
             }
             else{
-                message.innerHTML = "feel uncomfortable being around you because of your masochistic nature. You died socially. Also you already have this room's key.";
+                message.innerHTML = "Your washing machine feels uncomfortable being around you because of your masochistic nature. You died socially. Also you already have this room's key.";
             }
         }
     </script>
 </head>
-<body>
+<body onload="initialize()">
     <div id="message" class="story">
         You trip. You look back. You're done for. Your washing machine walks toward you menacingly wielding an arm and hammer. "Seems like I'm going to gain a lot of weight today." As you're being washed, you grab onto what looks like a key...
     </div>
