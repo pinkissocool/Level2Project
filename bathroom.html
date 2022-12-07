@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function initialize(){
+            message = document.getElementById("escapeMessage");
+
+            if (sessionStorage.backyardKey && sessionStorage.pantryKey && sessionStorage.momHouseKey && sessionStorage.earthCoreKey && sessionStorage. ){
+                sessionStorage.backyardKey= true;
+            }
+            else{
+                message.innerHTML = "Your washing machine feels uncomfortable being around you because of your masochistic nature. You died socially. Also you already have this room's key.";
+            }
+        }
+    </script>
+</head>
+<body onload="initialize()">
+    <div id="message" class="story">
+        When you enter the bathroom, you see the multitude of dead washing machines piled up next to what seems like a medium sized door. It also appears to have 5 keyholes that are necessary to open the door. The keys may be somewhere in this house...
+    </div>
+    <div class="decision">
+        <ul>
+            <li>
+                <a href="index.html">Back to Beginning</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
