@@ -8,13 +8,13 @@
     <script>
         function initialize(){
             message = document.getElementById("escapeMessage");
+            escapeDoor = document.getElementById("escapeDoor");
 
             if (sessionStorage.backyardKey && sessionStorage.pantryKey && sessionStorage.momHouseKey && sessionStorage.earthKey){
-                sessionStorage.backyardKey= true;
+                message.innerHTML= "The keys resonate with the door and spiral towards the keyholes. You reach in and grab the door handle. Enter?";
+                escapeDoor.innerHTML = <a href="escape.html">Door</a>;
             }
-            else{
-                message.innerHTML = "Your washing machine feels uncomfortable being around you because of your masochistic nature. You died socially. Also you already have this room's key.";
-            }
+            
         }
     </script>
 </head>
