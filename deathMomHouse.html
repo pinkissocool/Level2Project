@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function initialize(){
+            message = document.getElementById("deathMessage");
+
+            if (!sessionStorage.momHouseKey){
+                sessionStorage.momHouseKey= true;
+            }
+            else{
+                message.innerHTML = "Your washing machine feels uncomfortable being around you because of your masochistic nature. You died socially. Also you already have this room's key.";
+            }
+        }
+    </script>
+</head>
+<body onload="initialize()">
+    <div id="deathMessage" class="story">
+        As you enter your mom's house you feel happy. This must be the exit! As you step into your roo- A chilling aura immediately fills your body. You look to your left... Oh it's just your ol- a washing machine tackles you and mercilessly pours bleach all over you. As you're writhing in agony in the floor, you grab onto what looks like a key...
+    </div>
+    <div class="decision">
+        <ul>
+            <li>
+                <a href="index.html">Back to Beginning</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
