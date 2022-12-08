@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function initialize(){
+        function initialize() {
             message = document.getElementById("deathMessage");
 
-            if (!sessionStorage.momHouseKey){
-                sessionStorage.momHouseKey= true;
+            if (!localStorage.getItem('momHouseKey') || localStorage.getItem('momHouseKey') == "false"){
+                localStorage.setItem('momHouseKey', true);
             }
             else{
                 message.innerHTML = "Your washing machine feels uncomfortable being around you because of your masochistic nature. You died socially. Also you already have this room's key.";

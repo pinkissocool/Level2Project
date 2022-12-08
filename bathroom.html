@@ -6,13 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function initialize(){
+        function initialize() {
             message = document.getElementById("escapeMessage");
             escapeDoor = document.getElementById("escapeDoor");
 
-            if (sessionStorage.backyardKey && sessionStorage.pantryKey && sessionStorage.momHouseKey && sessionStorage.earthKey){
+            if (localStorage.backyardKey == "true" && localStorage.pantryKey == "true" && localStorage.momHouseKey == "true" && localStorage.earthCoreKey == "true"){
                 message.innerHTML= "The keys resonate with the door and spiral towards the keyholes. You reach in and grab the door handle. Enter?";
-                escapeDoor.innerHTML = <a href="escape.html">Door</a>;
+                escapeDoor.innerHTML = "<a href='escape.html'>Door</a>";
+            }
+            else{
+                message.innerHTML ="When you enter the bathroom, you see the multitude of dead washing machines piled up next to what seems like a medium sized door. It also appears to have 4 keyholes that are necessary to open the door. The keys may be somewhere in this house...";
+                escapeDoor.innerHTML = "<a href='index.html'>Beginning</a>";
             }
             
         }
@@ -20,9 +24,9 @@
 </head>
 <body onload="initialize()">
     <div id="escapeMessage" class="story">
-        When you enter the bathroom, you see the multitude of dead washing machines piled up next to what seems like a medium sized door. It also appears to have 5 keyholes that are necessary to open the door. The keys may be somewhere in this house...
+        When you enter the bathroom, you see the multitude of dead washing machines piled up next to what seems like a medium sized door. It also appears to have 4 keyholes that are necessary to open the door. The keys may be somewhere in this house...
     </div>
-    <div class="decision">
+    <div id ="escapeDoor" class="decision">
         <ul>
             <li>
                 <a href="index.html">Back to Beginning</a>

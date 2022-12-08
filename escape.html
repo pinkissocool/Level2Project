@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function initialize(){
-            sessionStorage.backyardKey = false;
-            sessionStorage.pantryKey = false;
-            sessionStorage.momHouseKey = false;
-            sessionStorage.earthKey = false;
+        function initialize() {
+            localStorage.setItem('backyardKey', false);
+            localStorage.setItem('pantryKey', false);
+            localStorage.momHouseKey = false;
+            localStorage.earthKey = false;
+            console.log("done");
+            // alert( localStorage.getItem('backyardKey') );
         }
     </script>
 </head>
-<body>
+<body onload="initialize()">
     <div class = "story">CONGRATULATIONS YOU'VE ESCAPED. PLAY AGAIN?</div>
     <div class = "decision">
         <a href="index.html">Start</a>

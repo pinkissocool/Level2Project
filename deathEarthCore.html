@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function initialize(){
+        function initialize() {
             message = document.getElementById("deathMessage");
-
-            if (!sessionStorage.earthKey){
-                sessionStorage.earthKey = true;
+            if (!localStorage.getItem('earthCoreKey') || localStorage.getItem('earthCoreKey') == "false"){
+                localStorage.setItem('earthCoreKey', true);
+                console.log("yo");
             }
             else{
                 message.innerHTML = "The washing machines feel uncomfortable being around you because of your masochistic nature. You died socially. Also you already have this room's key.";
@@ -18,9 +18,9 @@
         }
     </script>
 </head>
-<body>
+<body onload="initialize()">
     <div id="deathMessage" class="story">
-       Upon entering Earth's core, the washing machine resistance attacks you. In the midst of taking their punches and kicks, you grab onto what looks like a key... 
+       Upon entering earthCore's core, the washing machine resistance attacks you. In the midst of taking their punches and kicks, you grab onto what looks like a key... 
     </div>
     <div class="decision">
         <ul>
