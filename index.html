@@ -5,16 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="myCss.css">
     <script>
-        
+        function initialize(){
+            hiddenMessage = document.getElementById("hiddenMessage");
+        }
+
+        function switchMessage() {
+            newMessage = "Booh!";
+            display();
+        }
+
+        function display() {
+            hiddenMessage.innerHTML = newMessage;
+        }
     </script>
 </head>
-<body>
-    <div class = "story">As you enter your home, you notice that the door closed behind you. Weird. Maybe you need to change the hinges. You want to go to either the living room or kitchen. Which do you choose?</div>
+<body onload="initialize()">
+    <img src="images/hauntedHouse.jpeg">
+    <div id="hiddenMessage" class = "story">As you enter your home, you notice that the door closed behind you. Weird. Maybe you need to change the hinges. You want to go to either the living room or kitchen. Which do you choose?</div>
     <div class = "decision">
         <a href="kitchen.html">Kitchen</a>
         <a href="livingRoom.html">Living Room</a>
     </div>
+    <button onclick="switchMessage()"></button>
 </body>
 </html>
 <!-- 

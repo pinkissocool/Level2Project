@@ -1,15 +1,22 @@
 body{
-    
+    background-color: black;
+    color: white;
 }
 
 img{
-
+    width: 25%;
+    height: 25%;
 }
 
 .story{
-
+    color:white;
 }
 
 .decision{
+    border: solid white 1px;
+    width: 15%;
+}
 
+a{
+    color: white;
 }
